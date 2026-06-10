@@ -550,3 +550,30 @@ export '../utils/open_router_service.dart'
     show OpenRouterService, openRouterServiceProvider;
 export '../utils/serp_api_service.dart'
     show SerpApiService, serpApiServiceProvider, SerpShoppingResult, SerpOrganicResult;
+
+// =============================================================================
+// Onboarding state providers
+// =============================================================================
+
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+/// Title for Goal A during onboarding.
+final onboardingGoalATitleProvider = StateProvider<String>((ref) => 'PlayStation 5');
+
+/// Target amount for Goal A during onboarding (UAH).
+final onboardingGoalATargetProvider = StateProvider<double>((ref) => 25000.0);
+
+/// Title for Goal B during onboarding.
+final onboardingGoalBTitleProvider = StateProvider<String>((ref) => 'Gaming Monitor');
+
+/// Target amount for Goal B during onboarding (UAH).
+final onboardingGoalBTargetProvider = StateProvider<double>((ref) => 15000.0);
+
+/// Async check for whether onboarding has been completed.
+final onboardingCompletedProvider = FutureProvider<bool>((ref) async {
+  final prefs = await SharedPreferences.getInstance();
+  return prefs.getBool('has_completed_onboarding') ?? false;
+});
+
+// Re-export SharedPreferences for convenience
+export 'package:shared_preferences/shared_preferences.dart';

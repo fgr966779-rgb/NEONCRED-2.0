@@ -37,6 +37,9 @@ dependencies:
   # JSON
   json_annotation: ^4.9.0
 
+  # Local storage for onboarding flag
+  shared_preferences: ^2.2.0
+
   # Notifications — Smart Price Alert (Phase 1)
   flutter_local_notifications: ^18.0.0
 
