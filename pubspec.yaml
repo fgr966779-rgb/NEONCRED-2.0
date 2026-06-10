@@ -1,0 +1,57 @@
+name: neoncred
+description: NEONCRED — Cyberpunk-themed gamified savings app.
+publish_to: 'none'
+version: 2.0.0+30
+
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State management
+  flutter_riverpod: ^2.5.0
+  riverpod_annotation: ^2.3.0
+
+  # Navigation
+  go_router: ^14.2.0
+
+  # Database
+  drift: ^2.18.0
+  sqlite3_flutter_libs: ^0.5.0
+
+  # Path utilities
+  path: ^1.9.0
+  path_provider: ^2.1.0
+
+  # Fonts
+  google_fonts: ^6.2.0
+
+  # HTTP client
+  http: ^1.2.0
+
+  # Environment config
+  flutter_dotenv: ^5.1.0
+
+  # JSON
+  json_annotation: ^4.9.0
+
+  # Notifications — Smart Price Alert (Phase 1)
+  flutter_local_notifications: ^18.0.0
+
+  # Firebase (deferred to Phase 2 — FCM push)
+  # firebase_core: ^3.0.0
+  # firebase_messaging: ^15.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  drift_dev: ^2.18.0
+  build_runner: ^2.4.0
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  # assets:
+  #   - .env
